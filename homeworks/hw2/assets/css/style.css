@@ -66,7 +66,7 @@ div {
 .circle.fancy {
     border-style: dotted;
 }
-div:first-child.circle {
+.row :first-child.circle {
     opacity: 0;
 }
 .green, .fancy {
@@ -74,5 +74,7 @@ div:first-child.circle {
 }
 .circle:hover {
     opacity: 0.5;
+}
+#second-row .circle:hover{
     transform: scale(1.25);
 }
