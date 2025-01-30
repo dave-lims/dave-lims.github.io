@@ -1,0 +1,16 @@
+:root {
+  /*-------- Global Style --------*/
+  --primary-color: ;
+  --secondary-color: ;
+  --accent-color: ;
+  
+  --font-family: ;
+  --fs-xl: ;
+  --fs-lg: ;
+  --fs-md: ;
+  --fs-sm: ;
+
+  /*-------- Component-Specific --------*/
+  --card-bg-color: ;
+  --border-color: ;
+}
