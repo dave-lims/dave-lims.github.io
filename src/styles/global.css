@@ -1,6 +1,14 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+header {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+
+/*-------- Default style --------*/
+h1, h2, h3, p {
+  margin: 0;
 }

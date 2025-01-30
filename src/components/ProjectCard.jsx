@@ -1,22 +1,33 @@
 import styles from "./ProjectCard.module.css";
+import PropTypes from "prop-types";
 
-const ProjectCard = () => {
+const ProjectCard = ({ image, title, description, techStacks }) => {
   return (
-    <>
-      <div className={styles.card}>ProjectCard</div>
+    <div className={styles.card}>
+      <img src={image} alt={`Mockup Image for ${title}`} />
 
-      <div>
-        <h3 className={styles.projectTitle}>Project Title</h3>
-        <p className={styles.projectDescription}>
-          Project Description BLAH BLAH BLAH BLAH BLAH BLAH
-        </p>
+      <div className={styles.cardContent}>
+        <h3 className={styles.projectTitle}>{title}</h3>
+        <p className={styles.projectDescription}>{description}</p>
+
         <div className={styles.techStack}>
-          <p className={styles.techStackItem}>HTML</p>
-          <p className={styles.techStackItem}>CSS</p>
+          {techStacks.map((tech, index) => (
+            <p key={index} className={styles.techStackItem}>
+              {tech}
+            </p>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
+};
+
+// Define the expected types of the props
+ProjectCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  techStacks: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ProjectCard;

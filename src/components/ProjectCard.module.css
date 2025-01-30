@@ -1,3 +1,25 @@
 .card {
   background-color: var(--card-bg-color);
+  background-color: red;
+
+  border-radius: var(--border-radius);
+}
+
+.cardContent {
+}
+
+.projectTitle {
+  font-size: var(--fs-md);
+}
+
+.projectDescription {
+  font-size: var(--fs-sm);
+}
+
+.techStack {
+
+}
+
+.techStackItem {
+
 }

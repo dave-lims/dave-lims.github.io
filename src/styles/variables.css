@@ -4,13 +4,14 @@
   --secondary-color: ;
   --accent-color: ;
   
-  --font-family: ;
-  --fs-xl: ;
+  --font-family: "Manrope";
+  --fs-xl: 1.5rem;
   --fs-lg: ;
-  --fs-md: ;
-  --fs-sm: ;
+  --fs-md: 0.875rem;
+  --fs-sm: 0.75rem;
 
   /*-------- Component-Specific --------*/
-  --card-bg-color: ;
+  --card-bg-color: rgba(255, 255, 255);
   --border-color: ;
+  --border-radius: 1rem;
 }
