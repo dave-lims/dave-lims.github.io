@@ -4,11 +4,12 @@
 
 :root {
   font-family: var(--font-family), Inter, system-ui, sans-serif;
+  background-color: var(--bg-color);  /* TODO: add gradient */
 }
 
 body {
   margin: 0;
-  padding: 1.625rem;
+  padding: 1.75rem;
 }
 
 /* :root {

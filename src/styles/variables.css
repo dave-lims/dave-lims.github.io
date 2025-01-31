@@ -3,6 +3,8 @@
   --primary-color: ;
   --secondary-color: ;
   --accent-color: ;
+  --bg-color: rgba(249, 249, 249);
+  --white: rgba(255, 255, 255);
   
   --font-family: "Manrope";
   --fs-xl: 1.5rem;
@@ -11,7 +13,7 @@
   --fs-sm: 0.75rem;
 
   /*-------- Component-Specific --------*/
-  --card-bg-color: rgba(255, 255, 255);
-  --border-color: ;
+  --card-bg-color: rgba(248, 248, 248);
+  --border-color: rgba(234, 234, 234);
   --border-radius: 1rem;
 }

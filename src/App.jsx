@@ -14,8 +14,7 @@ function App() {
       <ProjectCard
         image={minionsImage}
         title="SLNG"
-        description="Yeah, I don’t really get skibidi either—
-but there’s a site that gets it."
+        description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
         techStacks={["HTML", "CSS"]}
       />
     </>
