@@ -1,7 +1,24 @@
 .projectCard {
   position: relative;
   margin-bottom: 1000px;
-  min-height: 304px;
+  max-width: 800px; /* TODO: clamp */
+  min-height: 304px; /* TODO: clamp */
+}
+
+.projectCard * {
+  transition: 0.5s;
+}
+
+.projectCard:hover {
+  cursor: pointer;
+}
+
+.projectCard:hover .card {
+  background-color: rgba(99, 213, 255, 0.05);  /* TODO: color var */
+}
+
+.projectCard:hover .overlay {
+  opacity: 0.9;
 }
 
 .card {
@@ -32,9 +49,10 @@
 
   padding: 1rem 1.25rem;
 
+  width: 100%;
   height: 100%;
 
-  background: linear-gradient(191.09deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 34.5%, rgba(255, 255, 255, 0.9) 62.5%, #fff 68%);
+  background: linear-gradient(191.09deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 34.5%, rgba(255, 255, 255, 0.9) 62.5%, #fff 68%); /* TODO: color var */
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
 }
