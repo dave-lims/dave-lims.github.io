@@ -19,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 80svh;
+
+  color: black;
 }
 
 img {
@@ -27,9 +29,9 @@ img {
   width: min(30svw, 150px);
 }
 
-b {
-  color: rgb(25, 103, 227);
-  font-weight: 600;
+p {
+  color: gray;
+  /* font-weight: 600; */
   text-align: center;
 }
 

@@ -14,10 +14,14 @@ function App() {
 
       <br />
 
-      <b>
-        This site is currently under development. <br /> Please check back later
-        and get excited for changes that are coming!
-      </b>
+      <p>
+        🚧 This site is currently under development. 🚧 <br /> Please check back
+        later and get excited for changes that are coming!
+      </p>
+
+      <br />
+
+      <p style={{ fontSize: "0.75rem" }}>@ 2025 David. All Rights Reserved.</p>
     </>
   );
 }
