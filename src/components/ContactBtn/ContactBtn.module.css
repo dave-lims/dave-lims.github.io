@@ -13,15 +13,25 @@
 
   padding: 0.75em;
 
-  background-color: var(--card-bg-color);
+  /* background-color: var(--card-bg-color); */
   /* background-color: var(--white); */
   border-radius: calc(var(--border-radius) - 0.25em);
 }
 
-p {
-  font-size: 0.75rem;
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
 }
 
 .icon {
   color: var(--light-gray);
+}
+
+/* TODO: review this sizing constraint */
+.contactBtn img {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 0.5em;
 }
