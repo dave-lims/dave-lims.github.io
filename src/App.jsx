@@ -1,22 +1,23 @@
 // import { useState } from "react";
-import ProjectCard from "./components/ProjectCard";
-import minionsImage from "./assets/minions.png";
+import me from "./assets/me.svg";
 
 function App() {
   return (
     <>
+      <img src={me} alt="Illustration of myself"></img>
+
       <header>Hello, I’m David Lim</header>
       <div>
-        I’m a <b>Software Engineer</b>, passionate about creating engaging,
-        human-centered experiences
+        I’m a Software Engineer, passionate about creating engaging,
+        human-centered experiences.
       </div>
 
-      <ProjectCard
-        image={minionsImage}
-        title="SLNG"
-        description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
-        techStacks={["HTML", "CSS"]}
-      />
+      <br />
+
+      <b>
+        This site is currently under development. <br /> Please check back later
+        and get excited for changes that are coming!
+      </b>
     </>
   );
 }
