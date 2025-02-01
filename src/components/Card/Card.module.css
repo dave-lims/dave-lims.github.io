@@ -1,4 +1,4 @@
-.contactBtn {
+.Card {
   padding: 0.25em;
 
   background-color: var(--white);
@@ -29,7 +29,7 @@
 }
 
 /* TODO: review this sizing constraint */
-.contactBtn img {
+.Card img {
   width: 32px;
   height: 32px;
 

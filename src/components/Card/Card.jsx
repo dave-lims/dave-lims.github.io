@@ -1,4 +1,4 @@
-import styles from "./ContactBtn.module.css";
+import styles from "./Card.module.css";
 import PropTypes from "prop-types";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,10 +13,10 @@ const iconMap = {
   arrow: faArrowUpRightFromSquare,
 };
 
-const ContactBtn = ({ label, contactInfo, icon, img }) => {
+const Card = ({ label, contactInfo, icon, img }) => {
   return (
     <>
-      <div className={styles.contactBtn}>
+      <div className={styles.Card}>
         <div className={styles.container}>
           <div className={styles.content}>
             {img && <img src={img} alt={label} />}
@@ -37,11 +37,11 @@ const ContactBtn = ({ label, contactInfo, icon, img }) => {
   );
 };
 
-ContactBtn.propTypes = {
+Card.propTypes = {
   label: PropTypes.string.isRequired,
   contactInfo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   img: PropTypes.string,
 };
 
-export default ContactBtn;
+export default Card;

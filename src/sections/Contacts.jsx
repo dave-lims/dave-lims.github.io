@@ -1,4 +1,4 @@
-import ContactBtn from "../components/ContactBtn";
+import Card from "../components/Card";
 
 const Contacts = () => {
   const style = {
@@ -9,21 +9,17 @@ const Contacts = () => {
 
   return (
     <div style={style}>
-      <ContactBtn
+      <Card
         label="Send an Email"
         contactInfo="david.lim@berkeley.edu"
         icon="email"
       />
-      <ContactBtn
+      <Card
         label="LinkedIn"
         contactInfo="linkedin.com/in/davidlim7391"
         icon="linkedin"
       />
-      <ContactBtn
-        label="GitHub"
-        contactInfo="github.com/dave-lims"
-        icon="github"
-      />
+      <Card label="GitHub" contactInfo="github.com/dave-lims" icon="github" />
     </div>
   );
 };

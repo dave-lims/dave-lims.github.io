@@ -1,4 +1,4 @@
-import ContactBtn from "../components/ContactBtn";
+import Card from "../components/Card";
 
 const OtherThings = () => {
   const style = {
@@ -9,30 +9,30 @@ const OtherThings = () => {
 
   return (
     <div style={style}>
-      <ContactBtn
+      <Card
         label="Web Director"
         contactInfo="ASUC SU @ UC Berkeley"
         icon="arrow"
         img="/src/assets/asuc.png"
       />
-      <ContactBtn
+      <Card
         label="Media Director"
         contactInfo="Codeology @ UC Berkeley"
         icon="arrow"
         img="/src/assets/codeology.svg"
       />
-      <ContactBtn
+      <Card
         label="Social Media Chair"
         contactInfo="KPG @ UC Berkeley"
         icon="arrow"
         img="/src/assets/kpg.svg"
       />
-      <ContactBtn
+      <Card
         label="Apparel Design"
         contactInfo="For Various Organizations"
         icon="arrow"
       />
-      <ContactBtn
+      <Card
         label="Graphic Design"
         contactInfo="My Passion Projects"
         icon="arrow"
