@@ -1,5 +1,7 @@
 import styles from "./ProjectCard.module.css";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({ image, title, description, techStacks }) => {
   return (
@@ -10,8 +12,8 @@ const ProjectCard = ({ image, title, description, techStacks }) => {
 
       <div className={styles.overlay}>
         <div className={styles.cardContent}>
-          <h3 className={styles.projectTitle}>{title}</h3>
-          <p className={styles.projectDescription}>{description}</p>
+          <h3>{title}</h3>
+          <p>{description}</p>
 
           <div className={styles.cardFooter}>
             <div className={styles.techStack}>
@@ -21,7 +23,11 @@ const ProjectCard = ({ image, title, description, techStacks }) => {
                 </p>
               ))}
             </div>
-            <div className={styles.filler}>fornow</div>
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
+              size="lg"
+              className={styles.icon}
+            />
           </div>
         </div>
       </div>

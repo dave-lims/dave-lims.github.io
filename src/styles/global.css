@@ -5,6 +5,10 @@
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -14,7 +18,22 @@ header {
   font-weight: 600;
 }
 
+img {
+  object-fit: cover;
+}
+
 /*-------- Default style --------*/
 h1, h2, h3, p {
   margin: 0;
+}
+
+h3 {
+  font-size: var(--fs-md);
+  font-weight: 650;
+}
+
+p {
+  font-size: var(--fs-sm);
+  letter-spacing: -1%;
+  color: var(--secondary-color);
 }
