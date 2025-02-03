@@ -8,6 +8,10 @@
   --white: rgba(255, 255, 255);
   --light-gray: rgba(204, 204, 204);
   --muted-blue: rgba(111, 159, 196);
+
+  --border-color: rgba(234, 234, 234);
+  --accent-border-color: rgba(201, 228, 255);
+  --border-radius: 1rem;
   
   --font-family: "Manrope";
   --fs-xl: 1.5rem;
@@ -17,6 +21,4 @@
 
   /*-------- Component-Specific --------*/
   --card-bg-color: rgba(248, 248, 248);
-  --border-color: rgba(234, 234, 234);
-  --border-radius: 1rem;
 }

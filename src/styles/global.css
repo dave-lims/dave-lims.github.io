@@ -37,3 +37,8 @@ p {
   letter-spacing: -1%;
   color: var(--secondary-color);
 }
+
+.icon {
+  color: var(--light-gray);
+  width: 1.25rem;
+}

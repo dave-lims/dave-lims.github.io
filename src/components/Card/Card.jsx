@@ -1,16 +1,12 @@
 import styles from "./Card.module.css";
 import PropTypes from "prop-types";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const iconMap = {
-  email: faEnvelope,
-  linkedin: faLinkedinIn,
-  github: faGithub,
-  arrow: faArrowUpRightFromSquare,
+  email: "fa-regular fa-envelope",
+  linkedin: "fa-brands fa-linkedin-in",
+  github: "fa-brands fa-github",
+  arrow: "fa-solid fa-arrow-up-right-from-square",
 };
 
 const Card = ({ label, contactInfo, icon, img }) => {
@@ -26,11 +22,7 @@ const Card = ({ label, contactInfo, icon, img }) => {
             </div>
           </div>
 
-          <FontAwesomeIcon
-            icon={iconMap[icon]}
-            size="lg"
-            className={styles.icon}
-          />
+          <FontAwesomeIcon icon={iconMap[icon]} size="lg" className="icon" />
         </div>
       </div>
     </>

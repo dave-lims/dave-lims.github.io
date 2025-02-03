@@ -1,7 +1,6 @@
 import styles from "./ProjectCard.module.css";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectCard = ({ image, title, description, techStacks }) => {
   return (
@@ -24,9 +23,9 @@ const ProjectCard = ({ image, title, description, techStacks }) => {
               ))}
             </div>
             <FontAwesomeIcon
-              icon={faArrowUpRightFromSquare}
+              icon="fa-solid fa-arrow-up-right-from-square"
               size="lg"
-              className={styles.icon}
+              className="icon"
             />
           </div>
         </div>

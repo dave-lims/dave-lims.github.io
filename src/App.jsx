@@ -1,17 +1,9 @@
-import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
-import Contacts from "./sections/Contacts";
-import Footer from "./sections/Footer";
-import OtherThings from "./sections/OtherThings";
+import { Home } from "./pages";
 
 function App() {
   return (
     <>
-      <Hero />
-      <Projects />
-      <OtherThings />
-      <Contacts />
-      <Footer />
+      <Home />
     </>
   );
 }
