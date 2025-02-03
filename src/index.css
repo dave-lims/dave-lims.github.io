@@ -4,7 +4,7 @@
 
 :root {
   font-family: var(--font-family), Inter, system-ui, sans-serif;
-  background-color: var(--bg-color);  /* TODO: add gradient */
+  background-color: var(--bg-color);
 }
 
 body {
@@ -13,7 +13,6 @@ body {
 }
 
 #root {
-  /* TODO: [pre-dev] rase these once changes are deployed */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,28 +24,10 @@ body {
 }
 
 img {
-  /* TODO: [pre-dev] rase these once changes are deployed */
   margin-inline: auto;
   width: min(30svw, 150px);
 }
 
 p {
-  color: gray;
-  /* font-weight: 600; */
-  
+  color: gray;  
 }
-
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */

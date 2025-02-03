@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import me from "./assets/me.svg";
 
 function App() {
@@ -15,8 +14,8 @@ function App() {
       <br />
 
       <p>
-        🚧 This site is currently under development. 🚧 <br /> Please check back
-        later and get excited for changes that are coming!
+        🚧 <br /> This site is currently under development. <br /> Please check
+        back later and get excited for changes that are coming!
       </p>
 
       <br />
