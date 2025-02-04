@@ -1,4 +1,5 @@
-import { Button, Card, ProjectCard } from "../../components";
+import { Button, Card, ProjectCard, Tag } from "../../components";
+import styles from "./Home.module.css";
 import minionsImage from "/src/assets/minions.png";
 import me from "/src/assets/me.svg";
 import letters from "/src/assets/mobile-letters.png";
@@ -12,8 +13,9 @@ const style = {
 const Home = () => {
   return (
     <>
-      <div>
-        <header>Hello, I’m David Lim</header>
+      <header className={styles.hero}>
+        <Tag icon="green-dot" text="Open for Work" />
+        <h1>Hello, I’m David Lim</h1>
         <div>
           I’m a <b>Software Engineer</b>, passionate about creating engaging,
           human-centered experiences
@@ -27,7 +29,7 @@ const Home = () => {
         </div>
 
         <img style={{ width: "100%" }} src={letters} />
-      </div>
+      </header>
 
       <div style={style}>
         <ProjectCard
