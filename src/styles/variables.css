@@ -1,10 +1,13 @@
 :root {
-  /*-------- Global Style --------*/
+  /*-------- Color Palette --------*/
   --primary-color: ;
   --secondary-color: rgba(79, 79, 79);
   --accent-color: rgba(63, 172, 255);
   
-  --bg-color: rgba(249, 249, 249);
+  --bg-color: rgba(250, 250, 250);
+  --blue-bg-color: rgba(230, 246, 255);
+
+
   --white: rgba(255, 255, 255);
   --light-gray: rgba(204, 204, 204);
   --muted-blue: rgba(111, 159, 196);
@@ -14,6 +17,7 @@
   --accent-border-color: rgba(201, 228, 255);
   --border-radius: 1rem;
   
+  /*-------- Typograhy --------*/
   --font-family: "Manrope";
   --fs-xl: 1.5rem;
   --fs-lg: ;

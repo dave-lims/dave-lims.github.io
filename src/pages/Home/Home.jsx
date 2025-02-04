@@ -4,34 +4,31 @@ import minionsImage from "/src/assets/minions.png";
 import me from "/src/assets/me.svg";
 import letters from "/src/assets/mobile-letters.png";
 
-const style = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "0.5rem",
-};
-
 const Home = () => {
   return (
-    <>
+    <div className={styles.home}>
       <header className={styles.hero}>
         <Tag icon="green-dot" text="Open for Work" />
-        <h1>Hello, I’m David Lim</h1>
+
         <div>
-          I’m a <b>Software Engineer</b>, passionate about creating engaging,
-          human-centered experiences
+          <h1>Hello, I’m David Lim</h1>
+          <h2>
+            I’m a <b>Software Engineer</b>, passionate about creating engaging,
+            human-centered experiences
+          </h2>
         </div>
 
-        <div className="">
+        <div className="flex-row-fit">
           <Button icon="linkedin" />
           <Button icon="github" />
           <Button icon="resume" />
           <Button icon="email" />
         </div>
 
-        <img style={{ width: "100%" }} src={letters} />
+        <img className={styles.cloudLetters} src={letters} />
       </header>
 
-      <div style={style}>
+      <div className="flex-column">
         <ProjectCard
           image={minionsImage}
           title="SLNG"
@@ -52,7 +49,7 @@ const Home = () => {
         />
       </div>
 
-      <div style={style}>
+      <div className="flex-column">
         <Card
           label="Web Director"
           contactInfo="ASUC SU @ UC Berkeley"
@@ -83,7 +80,7 @@ const Home = () => {
         />
       </div>
 
-      <div style={style}>
+      <div className="flex-column">
         <Card
           label="Send an Email"
           contactInfo="david.lim@berkeley.edu"
@@ -97,7 +94,7 @@ const Home = () => {
         <Card label="GitHub" contactInfo="github.com/dave-lims" icon="github" />
       </div>
 
-      <footer style={style}>
+      <footer className="flex-column">
         <img
           src={me}
           alt="Illustration of myself"
@@ -106,7 +103,7 @@ const Home = () => {
         <h3>Thank you for coming by</h3>
         <p>@ 2025 David. All Rights Reserved.</p>
       </footer>
-    </>
+    </div>
   );
 };
 

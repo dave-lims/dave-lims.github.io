@@ -13,18 +13,24 @@
   margin: 0 auto;
 }
 
-header {
-  font-size: var(--fs-xl);
-  font-weight: 600;
-}
-
 img {
   object-fit: cover;
 }
 
-/*-------- Default style --------*/
+/*-------- Tag styles --------*/
 h1, h2, h3, p {
   margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: var(--fs-md);
+  font-weight: 400;
+  color: var(--secondary-color);
 }
 
 h3 {
@@ -37,6 +43,29 @@ p {
   letter-spacing: -1%;
   color: var(--secondary-color);
 }
+
+b {
+  font-weight: 600;
+}
+
+/*-------- Container styles --------*/
+
+.flex-row-fit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  width: fit-content;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/*-------- Element styles --------*/
 
 .icon {
   color: var(--light-gray);

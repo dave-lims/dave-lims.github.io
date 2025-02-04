@@ -1,7 +1,9 @@
 .projectCard {
   position: relative;
-  max-width: 800px; /* TODO: clamp */
+  width: min(100%, 800px); /* TODO: clamp */
   min-height: 304px; /* TODO: clamp */
+
+  flex-shrink: 0;
 }
 
 .projectCard * {
