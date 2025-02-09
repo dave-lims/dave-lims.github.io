@@ -1,10 +1,48 @@
 .home {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  row-gap: 5rem;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* TODO: fix the positioning of the texts in relation to the image */
+/* -- this includes fixing the height adjustment of the hero section! */
+
+.hero {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 12vh;
+  
+
+  height: 70svh;
+
+  overflow: visible;
+}
+
+@media (min-width: 980px) {
+  .hero {
+    height: 90svh;
+  }
 }
 
 .cloudLetters {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 40%);
+  
+  width: 150svw;
+
+  z-index: -999;
+}
+
+footer * {
+  color: var(--muted-blue);
+}
+
+footer img {
+  max-width: 3em;
 }

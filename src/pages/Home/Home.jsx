@@ -95,11 +95,7 @@ const Home = () => {
       </div>
 
       <footer className="flex-column">
-        <img
-          src={me}
-          alt="Illustration of myself"
-          style={{ maxWidth: "3em" }}
-        />
+        <img src={me} alt="Illustration of myself" />
         <h3>Thank you for coming by</h3>
         <p>@ 2025 David. All Rights Reserved.</p>
       </footer>

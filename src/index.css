@@ -7,12 +7,17 @@
 
   background-color: var(--bg-color);
   /* TODO: fix linear-gradient */
-  background: linear-gradient(var(--bg-color) 9%, var(--blue-bg-color) 22%, var(--bg-color) 25%, var(--bg-color) 92%, var(--blue-bg-color) 100%);
+  /* background: linear-gradient(var(--bg-color) 9%, var(--blue-bg-color) 22%, var(--bg-color) 25%, var(--bg-color) 92%, var(--blue-bg-color) 100%); */
 }
 
-body {
+body {  
   margin: 0;
   padding: 1.75rem;
+  
+  max-width: 100vw;
+  max-width: 100svw;
+
+  overflow-x: hidden;
 }
 
 /* :root {
