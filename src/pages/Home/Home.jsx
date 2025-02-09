@@ -1,12 +1,14 @@
 import { Button, Card, ProjectCard, Tag } from "../../components";
 import styles from "./Home.module.css";
 import minionsImage from "/src/assets/minions.png";
-import me from "/src/assets/me.svg";
+import muted_me from "/src/assets/muted_me_no_bg.png";
 import letters from "/src/assets/mobile-letters.png";
 
 const Home = () => {
   return (
     <div className={styles.home}>
+      <div className={`glow-ball ${styles.bgBall}`}></div>
+
       <header className={styles.hero}>
         <Tag className={styles.heroTag} icon="green-dot" text="Open for Work" />
 
@@ -19,20 +21,21 @@ const Home = () => {
         </div>
 
         <div className="flex-row-fit">
-          <Button icon="linkedin" />
-          <Button icon="github" />
+          <Button icon="linkedin" link="https://linkedin.com/in/davidlim7391" />
+          <Button icon="github" link="https://github.com/dave-lims" />
           <Button icon="resume" />
-          <Button icon="email" />
-        </div>
-
-        <div className={styles.lettersContainer}>
-          <div className={styles.lettersWrapper}>
-            <img className={styles.letters} src={letters} />
-          </div>
+          <Button icon="email" link="mailto:david.lim@berkeley.edu" />
         </div>
       </header>
 
-      <div className="flex-column">
+      <div className={styles.lettersContainer}>
+        <div className={styles.lettersWrapper}>
+          <img className={styles.letters} src={letters} />
+        </div>
+      </div>
+
+      <section className="flex-column">
+        <h3>PROJECTS</h3>
         <ProjectCard
           image={minionsImage}
           title="SLNG"
@@ -52,9 +55,10 @@ const Home = () => {
           description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
           techStacks={["HTML", "CSS"]}
         />
-      </div>
+      </section>
 
-      <div className="flex-column">
+      <section className="flex-column">
+        <h3>OTHER THINGS I&apos;VE WORKED ON</h3>
         <Card
           label="Web Director"
           contactInfo="ASUC SU @ UC Berkeley"
@@ -83,25 +87,33 @@ const Home = () => {
           contactInfo="My Passion Projects"
           icon="arrow"
         />
-      </div>
+      </section>
 
-      <div className="flex-column">
+      <section className="flex-column">
+        <h3>CONTACT ME</h3>
         <Card
           label="Send an Email"
           contactInfo="david.lim@berkeley.edu"
           icon="email"
+          link="mailto:david.lim@berkeley.edu"
         />
         <Card
           label="LinkedIn"
           contactInfo="linkedin.com/in/davidlim7391"
           icon="linkedin"
+          link="https://linkedin.com/in/davidlim7391"
         />
-        <Card label="GitHub" contactInfo="github.com/dave-lims" icon="github" />
-      </div>
+        <Card
+          label="GitHub"
+          contactInfo="github.com/dave-lims"
+          icon="github"
+          link="https://github.com/dave-lims"
+        />
+      </section>
 
-      <footer className="flex-column">
-        <img src={me} alt="Illustration of myself" />
-        <h3>Thank you for coming by</h3>
+      <footer>
+        <img src={muted_me} alt="Illustration of myself" />
+        <h4>Thank you for coming by</h4>
         <p>@ 2025 David. All Rights Reserved.</p>
       </footer>
     </div>

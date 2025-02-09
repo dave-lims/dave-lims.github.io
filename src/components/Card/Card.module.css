@@ -8,6 +8,10 @@
   border-radius: var(--border-radius);
 }
 
+.Card:hover .container {
+  background-color: var(--bg-color); 
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -16,6 +20,8 @@
   padding: 0.75em;
   
   border-radius: calc(var(--border-radius) - 0.25em);
+
+  transition: 0.2s;
 }
 
 .content {
@@ -26,8 +32,8 @@
 
 /* TODO: review this sizing constraint */
 .Card img {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 
   border-radius: 0.5em;
 }

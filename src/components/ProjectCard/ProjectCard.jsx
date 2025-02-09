@@ -11,7 +11,7 @@ const ProjectCard = ({ image, title, description, techStacks, link }) => {
 
       <div className={styles.overlay}>
         <div className={styles.cardContent}>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
           <p>{description}</p>
 
           <div className={styles.cardFooter}>

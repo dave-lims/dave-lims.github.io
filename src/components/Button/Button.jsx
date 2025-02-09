@@ -9,9 +9,9 @@ const iconMap = {
   email: "fa-regular fa-envelope",
 };
 
-const Button = ({ icon }) => {
+const Button = ({ icon, link }) => {
   return (
-    <div className={styles.button}>
+    <a className={styles.button} href={link} target="_blank">
       {icon && (
         <FontAwesomeIcon
           icon={iconMap[icon]}
@@ -20,12 +20,13 @@ const Button = ({ icon }) => {
         />
       )}
       <div></div>
-    </div>
+    </a>
   );
 };
 
 Button.propTypes = {
   icon: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default Button;

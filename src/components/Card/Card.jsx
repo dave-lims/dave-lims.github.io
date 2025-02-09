@@ -9,23 +9,21 @@ const iconMap = {
   arrow: "fa-solid fa-arrow-up-right-from-square",
 };
 
-const Card = ({ label, contactInfo, icon, img }) => {
+const Card = ({ label, contactInfo, icon, img, link }) => {
   return (
-    <>
-      <div className={styles.Card}>
-        <div className={styles.container}>
-          <div className={styles.content}>
-            {img && <img src={img} alt={label} />}
-            <div>
-              <h3>{label}</h3>
-              <p>{contactInfo}</p>
-            </div>
+    <a className={styles.Card} href={link} target="_blank">
+      <div className={styles.container}>
+        <div className={styles.content}>
+          {img && <img src={img} alt={label} />}
+          <div>
+            <h4>{label}</h4>
+            <p>{contactInfo}</p>
           </div>
-
-          <FontAwesomeIcon icon={iconMap[icon]} size="lg" className="icon" />
         </div>
+
+        <FontAwesomeIcon icon={iconMap[icon]} size="lg" className="icon" />
       </div>
-    </>
+    </a>
   );
 };
 
@@ -34,6 +32,7 @@ Card.propTypes = {
   contactInfo: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   img: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default Card;

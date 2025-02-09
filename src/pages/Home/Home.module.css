@@ -2,7 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  padding: 1.75rem;
+
+  background-color: var(--bg-color);
+  background: linear-gradient(var(--bg-color) 90%, var(--blue-bg-color));
+  z-index: 1;
+}
+
+.bgBall {
+  position: absolute;
+  top: -20svh;
+  right: -40svw;
 }
 
 /* TODO: fix the positioning of the texts in relation to the image */
@@ -15,9 +25,8 @@
   flex-direction: column;
   align-items: flex-start;
 
+  margin-bottom: 3rem;
   padding-top: 8vh;
-
-  height: 70svh;
 
   overflow: visible;
 }
@@ -32,44 +41,46 @@
 }
 
 .lettersContainer {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 40%);
-  
+  position: relative;
+  margin-bottom: 2rem;
   width: 150svw;
-
-  z-index: -999;
 }
 
 .letters {
   width: 100%;
 }
 
-.lettersContainer::after {
+.lettersContainer::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: -25%;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(var(--bg-color), var(--blue-bg-color) 35%, var(--bg-color));
+  height: 150%;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--blue-bg-color) 30%, var(--blue-bg-color) 60%, rgba(0, 0, 0, 0));
   
   z-index: -1;
   /* filter: blur(); */
 }
 
-footer * {
-  color: var(--muted-blue);
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer img {
   max-width: 3em;
+  margin-bottom: 0.25rem;
 }
 
+footer h4 {
+  color: var(--muted-blue);
+  margin-bottom: 0.25em;
+}
 
-@media (min-width: 980px) {
-  .hero {
-    height: 90svh;
-  }
+footer p {
+  color: var(--muted-blue);
+  font-size: 0.5rem;
 }
