@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <header className={styles.hero}>
-        <Tag icon="green-dot" text="Open for Work" />
+        <Tag className={styles.heroTag} icon="green-dot" text="Open for Work" />
 
-        <div>
+        <div className={styles.heroText}>
           <h1>Hello, I’m David Lim</h1>
           <h2>
             I’m a <b>Software Engineer</b>, passionate about creating engaging,
@@ -25,7 +25,11 @@ const Home = () => {
           <Button icon="email" />
         </div>
 
-        <img className={styles.cloudLetters} src={letters} />
+        <div className={styles.lettersContainer}>
+          <div className={styles.lettersWrapper}>
+            <img className={styles.letters} src={letters} />
+          </div>
+        </div>
       </header>
 
       <div className="flex-column">
@@ -34,6 +38,7 @@ const Home = () => {
           title="SLNG"
           description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
           techStacks={["HTML", "CSS"]}
+          link="https://dave-lims.github.io/slng_2.0/"
         />
         <ProjectCard
           image={minionsImage}

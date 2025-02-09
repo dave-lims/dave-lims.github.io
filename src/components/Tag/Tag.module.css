@@ -4,7 +4,8 @@
   align-items: center;
   gap: 0.375em;
   
-  padding: 0.375rem 0.75rem;
+  padding: 0.375em 0.75em;
+  margin-bottom: 0.75em;
 
   width: fit-content;
 

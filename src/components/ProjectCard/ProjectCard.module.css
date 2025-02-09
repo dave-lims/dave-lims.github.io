@@ -10,10 +10,6 @@
   transition: 0.5s;
 }
 
-.projectCard:hover {
-  cursor: pointer;
-}
-
 .projectCard:hover .card {
   background-color: rgba(99, 213, 255, 0.05);  /* TODO: color var */
 }
