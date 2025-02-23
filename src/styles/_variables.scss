@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --color-primary: #589EF1;
+  --color-text-primary: #3E3E3E;
+  --color-text-secondary: #949494;
+  --color-background: #FFFFFF;
+  --color-border: #EAEAEA;
+  --color-card-background: #EDEDED;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 2px 20px rgba(0, 0, 0, 0.15);
+  
+  /* Font Sizes */
+  --fs-sm: 0.875rem;   /* 14px */
+  --fs-base: 1rem;     /* 16px */
+  --fs-md: 1.25rem;    /* 20px */
+  --fs-lg: 1.5rem;     /* 24px */
+  --fs-xl: 2rem;  
+}

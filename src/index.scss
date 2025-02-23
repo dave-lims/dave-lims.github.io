@@ -1,11 +1,9 @@
-@import './styles/global.css';
-@import './styles/variables.css';
+@import './styles/global';
+@import './styles/variables';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-  font-family: var(--font-family), Inter, system-ui, sans-serif;
-  /* TODO: fix linear-gradient */
-  /* background: linear-gradient(var(--bg-color) 9%, var(--blue-bg-color) 22%, var(--bg-color) 25%, var(--bg-color) 92%, var(--blue-bg-color) 100%); */
+  /* font-family: var(--font-family), Inter, system-ui, sans-serif; */
 }
 
 html {
@@ -24,13 +22,6 @@ body {
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
