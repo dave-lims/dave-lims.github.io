@@ -1,0 +1,42 @@
+.HomeNav {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+
+  padding: 0.25em;
+
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 10rem;
+  
+  z-index: 999;
+}
+
+.HomeNav ul {
+  display: flex;
+  gap: 2px;
+
+  padding-inline: 0.125em;
+
+  background-color: var(--card-bg-color);
+  border-radius: 10rem;
+}
+
+.HomeNav li {
+}
+
+.HomeNav li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 3.25rem;
+  min-height: 3.25rem;
+
+  color: var(--light-gray);
+}
+
+.HomeNav img {
+  width: 2rem;
+}

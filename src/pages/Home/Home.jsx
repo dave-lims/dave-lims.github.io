@@ -1,4 +1,4 @@
-import { Button, Card, ProjectCard, Tag } from "../../components";
+import { Button, Card, ProjectCard, Tag, HomeNav } from "../../components";
 import styles from "./Home.module.css";
 import minionsImage from "/src/assets/minions.png";
 import muted_me from "/src/assets/muted_me_no_bg.png";
@@ -7,9 +7,10 @@ import letters from "/src/assets/mobile-letters.png";
 const Home = () => {
   return (
     <div className={styles.home}>
-      <div className={`glow-ball ${styles.bgBall}`}></div>
+      <HomeNav />
 
-      <header className={styles.hero}>
+      <div className={`glow-ball ${styles.bgBall}`}></div>
+      <header className={styles.hero} id="hero">
         <Tag className={styles.heroTag} icon="green-dot" text="Open for Work" />
 
         <div className={styles.heroText}>
@@ -34,7 +35,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="flex-column">
+      <section className="flex-column" id="projects">
         <h3>PROJECTS</h3>
         <ProjectCard
           image={minionsImage}
@@ -57,7 +58,7 @@ const Home = () => {
         />
       </section>
 
-      <section className="flex-column">
+      <section className="flex-column" id="things">
         <h3>OTHER THINGS I&apos;VE WORKED ON</h3>
         <Card
           label="Web Director"
@@ -89,7 +90,7 @@ const Home = () => {
         />
       </section>
 
-      <section className="flex-column">
+      <section className="flex-column" id="contacts">
         <h3>CONTACT ME</h3>
         <Card
           label="Send an Email"
