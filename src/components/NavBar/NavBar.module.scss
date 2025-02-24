@@ -1,0 +1,44 @@
+.NavBar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  z-index: 100;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0.5rem 1.25rem;
+
+  background-color: var(--background-color);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+
+    padding: 0.75rem 1rem;
+
+    background-color: var(--brand-focus);
+    border-radius: var(--border-radius-md);
+  }
+
+  img {
+    width: 2rem;
+  }
+
+  .Icon {
+    font-size: 1.5rem;
+  }
+}

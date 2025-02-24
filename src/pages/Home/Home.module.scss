@@ -1,3 +1,48 @@
-.container {
-  background-color: red;
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: -5rem;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    color: var(--text-strong);
+  }
+  h2 {
+    margin-bottom: 0.25rem;
+    color: var(--text-disabled);
+  }
+}
+
+.Placeholder {
+  // TODO: Swap this out with a real image
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+  width: min(100%, 400px);
+  height: 80px;
+
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+}
+
+.Description {
+  margin-inline: auto;
+  max-width: 400px;
+  padding-inline: 1rem;
+
+  color: var(--text-subtle);
+
+  b {
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+  }
 }

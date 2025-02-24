@@ -1,8 +1,9 @@
 // Icons imported from FontAwesome (free plan)
-
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFilePdf, faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFolder, faMitten } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faFilePdf, faEnvelope, faArrowUpRightFromSquare, faLinkedinIn, faGithub);
+// import { faFilePdf, faEnvelope } from '@fortawesome/free-regular-svg-icons';
+// import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+// import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+library.add( faFolder, faMitten );
