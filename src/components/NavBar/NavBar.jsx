@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../assets/melol.png";
 
 const NavBar = () => {
+  const [selected, setSelected] = useState("home");
   const [indicator, setIndicator] = useState({
     left: 0,
     width: 0,
@@ -14,15 +15,30 @@ const NavBar = () => {
   return (
     <nav className={styles.NavBar}>
       <ul>
-        <Tab setIndicator={setIndicator} href="#home">
+        <Tab
+          setIndicator={setIndicator}
+          selected={selected}
+          setSelected={setSelected}
+          label="Home"
+        >
           <img src={logo} alt="logo" />
           {/* <p>Home</p> */}
         </Tab>
-        <Tab setIndicator={setIndicator} href="#projects">
+        <Tab
+          setIndicator={setIndicator}
+          label="projects"
+          selected={selected}
+          setSelected={setSelected}
+        >
           <FontAwesomeIcon icon="folder" className={styles.Icon} />
-          <p>Work</p>
+          <p>Projects</p>
         </Tab>
-        <Tab setIndicator={setIndicator} href="#contact">
+        <Tab
+          setIndicator={setIndicator}
+          label="contact"
+          selected={selected}
+          setSelected={setSelected}
+        >
           <FontAwesomeIcon icon="mitten" className={styles.Icon} />
           <p>Contact</p>
         </Tab>
@@ -33,25 +49,27 @@ const NavBar = () => {
   );
 };
 
-const Tab = ({ children, setIndicator, href }) => {
+const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
   const ref = useRef();
 
   return (
-    <li style={{ zIndex: 10 }}>
+    <li style={{ zIndex: 1 }}>
       <a
-        href={href}
+        href={`#${label}`}
         ref={ref}
         onClick={() => {
           if (!ref?.current) return; // If the ref is not found, return
 
           const { width } = ref.current.getBoundingClientRect();
 
+          setSelected(label);
           setIndicator({
             left: ref.current.offsetLeft,
             width,
             opacity: 1,
           });
         }}
+        className={selected == label ? styles.Selected : ""}
       >
         {children}
       </a>
@@ -76,7 +94,9 @@ const Indicator = ({ position }) => {
 Tab.propTypes = {
   children: PropTypes.node.isRequired,
   setIndicator: PropTypes.func.isRequired,
-  href: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  selected: PropTypes.string.isRequired,
+  setSelected: PropTypes.func.isRequired,
 };
 
 Indicator.propTypes = {

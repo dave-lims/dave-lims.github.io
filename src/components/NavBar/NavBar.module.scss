@@ -40,6 +40,10 @@ a {
   }
 }
 
+.Selected {
+  color: white;
+}
+
 img {
   width: 1.5rem;
 }
@@ -53,4 +57,5 @@ img {
   height: 100%;
   background-color: blue;
   z-index: 0;
+  mix-blend-mode: difference;
 }
