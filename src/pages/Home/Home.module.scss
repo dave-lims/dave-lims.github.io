@@ -27,11 +27,18 @@
   // TODO: Swap this out with a real image
   margin-inline: auto;
   margin-bottom: 1.5rem;
-  width: min(100%, 400px);
+  // width: min(100%, 400px);
+  width: 70%;
   height: 80px;
 
   background-color: var(--bg-secondary);
   border-radius: var(--border-radius-md);
+
+  transition: width 0.5s ease;
+
+  &:hover {
+    width: 80%;
+  }
 }
 
 .Description {
