@@ -66,6 +66,7 @@ const Home = () => {
           title="SLNG"
           description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
           mockup={slng}
+          link="https://dave-lims.github.io/slng_2.0/"
         />
       </section>
     </div>

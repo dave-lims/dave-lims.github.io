@@ -5,9 +5,18 @@
 
   margin-top: 2rem; // TODO: temporary set
   width: min(100%, 800px);
+
+  &:hover {
+    .mockupBackground {
+      width: 100%;
+    }
+    
+    img { // TODO: fix selector, but also scale for 2+ images
+      top: 0.25rem;
+      transform: translateX(-50%) rotate(5deg);
+    }
+  }
 }
-
-
 
 .mockupFrame {
   position: relative;
@@ -16,7 +25,6 @@
   height: 192px; // TODO: temporary set
   border-radius: var(--border-radius-md);
   overflow: hidden;
-
 
   .mockupBackground {
     position: absolute;
@@ -31,7 +39,7 @@
     background-color: var(--bg-secondary);
     border-radius: var(--border-radius-md);
 
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   img {
@@ -43,16 +51,6 @@
     transform-origin: center;
     
     transition: all 0.3s ease;
-  }
-
-  &:hover {
-    .mockupBackground {
-      width: 100%;
-    }
-    img {
-      top: 0.25rem;
-      transform: translateX(-50%) rotate(5deg);
-    }
   }
 }
 
