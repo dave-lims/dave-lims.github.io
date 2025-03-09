@@ -6,11 +6,10 @@
   z-index: 100;
   
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 
-  padding: 0.25rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   
   background-color: var(--background-color);
   border: 1px solid var(--border-primary);
@@ -21,27 +20,34 @@
 ul {
   position: relative; // Ensure that offsetLeft works properly
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 1.5rem;
 }
 
 a {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 
-  padding: 0.75rem 0.5rem;
-
+  padding: 0.75rem 1rem;
+  
   p {
-    // width: 0;
+    width: 0;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.3s ease;
   }
-}
 
-.Selected {
-  color: white;
+  @media (min-width: 480px) {
+    gap: 0.5rem;
+
+    p {
+      width: fit-content;
+    }
+  }
+
+  &.Selected {
+    color: white;
+    transition: color 0.2s ease;
+  }
 }
 
 img {
@@ -54,8 +60,12 @@ img {
 
 .Indicator {
   position: absolute;
-  height: 100%;
-  background-color: blue;
   z-index: 0;
-  mix-blend-mode: difference;
+
+  height: 100%;
+
+  background-color: var(--brand-focus);
+  border-radius: var(--border-radius-sm);
+
+  transition: left 0.3s ease, width 0.6s ease;
 }

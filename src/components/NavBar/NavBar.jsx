@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./NavBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../assets/melol.png";
 
 const NavBar = () => {
   const [selected, setSelected] = useState("home");
@@ -17,12 +16,12 @@ const NavBar = () => {
       <ul>
         <Tab
           setIndicator={setIndicator}
+          label="home"
           selected={selected}
           setSelected={setSelected}
-          label="Home"
         >
-          <img src={logo} alt="logo" />
-          {/* <p>Home</p> */}
+          <FontAwesomeIcon icon="mitten" className={styles.Icon} />
+          <p>Hey</p>
         </Tab>
         <Tab
           setIndicator={setIndicator}
@@ -52,23 +51,31 @@ const NavBar = () => {
 const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
   const ref = useRef();
 
+  useEffect(() => {
+    const updateIndicator = () => {
+      if (!ref.current || selected !== label) return;
+
+      setIndicator({
+        left: ref.current.offsetLeft,
+        width: ref.current.getBoundingClientRect().width,
+        opacity: 1,
+      });
+    };
+
+    updateIndicator();
+
+    window.addEventListener("resize", updateIndicator);
+    return () => {
+      window.removeEventListener("resize", updateIndicator); // Cleanup for future-proofing (Tab doesn't unmount usually)
+    };
+  }, [selected, label, setIndicator]);
+
   return (
     <li style={{ zIndex: 1 }}>
       <a
         href={`#${label}`}
         ref={ref}
-        onClick={() => {
-          if (!ref?.current) return; // If the ref is not found, return
-
-          const { width } = ref.current.getBoundingClientRect();
-
-          setSelected(label);
-          setIndicator({
-            left: ref.current.offsetLeft,
-            width,
-            opacity: 1,
-          });
-        }}
+        onClick={() => setSelected(label)}
         className={selected == label ? styles.Selected : ""}
       >
         {children}
