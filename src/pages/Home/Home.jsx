@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
 import { ProjectCard, NavBar } from "../../components";
+import slng from "../../assets/mock-slng.png";
 
 const Home = () => {
   const [selectedSection, setSelectedSection] = useState("home");
@@ -61,7 +62,11 @@ const Home = () => {
         id="projects"
       >
         <h2>Selected Works</h2>
-        <ProjectCard />
+        <ProjectCard
+          title="SLNG"
+          description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
+          mockup={slng}
+        />
       </section>
     </div>
   );

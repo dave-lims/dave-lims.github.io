@@ -11,7 +11,7 @@
 
   padding: 0.5rem 0.5rem;
   
-  background-color: var(--background-color);
+  background-color: var(--bg-primary);
   border: 1px solid var(--border-primary);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
@@ -48,10 +48,6 @@ a {
     color: white;
     transition: color 0.2s ease;
   }
-}
-
-img {
-  width: 1.5rem;
 }
 
 .Icon {
