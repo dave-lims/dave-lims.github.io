@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styles from "./NavBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavBar = () => {
-  const [selected, setSelected] = useState("home");
+const NavBar = ({ selected, setSelected }) => {
+  // const [selected, setSelected] = useState("home");
   const [indicator, setIndicator] = useState({
     left: 0,
     width: 0,
@@ -38,7 +38,7 @@ const NavBar = () => {
           selected={selected}
           setSelected={setSelected}
         >
-          <FontAwesomeIcon icon="mitten" className={styles.Icon} />
+          <FontAwesomeIcon icon="id-badge" className={styles.Icon} />
           <p>Contact</p>
         </Tab>
 
@@ -63,8 +63,8 @@ const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
     };
 
     updateIndicator();
-
     window.addEventListener("resize", updateIndicator);
+
     return () => {
       window.removeEventListener("resize", updateIndicator); // Cleanup for future-proofing (Tab doesn't unmount usually)
     };
@@ -98,6 +98,11 @@ const Indicator = ({ position }) => {
 };
 
 // Prop Type Validation
+NavBar.propTypes = {
+  selected: PropTypes.string.isRequired,
+  setSelected: PropTypes.func.isRequired,
+};
+
 Tab.propTypes = {
   children: PropTypes.node.isRequired,
   setIndicator: PropTypes.func.isRequired,
