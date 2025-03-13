@@ -15,22 +15,24 @@
   border: 1px solid var(--border-primary);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
+
+  ul {
+    position: relative; // Ensure that offsetLeft works properly
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.125rem;
+  }
 }
 
-ul {
-  position: relative; // Ensure that offsetLeft works properly
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-a {
+.Tab {
   display: flex;
   align-items: center;
-
   padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
   
-  p {
+  .label {
     width: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -39,7 +41,7 @@ a {
   @media (min-width: 480px) {
     gap: 0.5rem;
 
-    p {
+    .label {
       width: fit-content;
     }
   }
@@ -47,6 +49,10 @@ a {
   &.Selected {
     color: white;
     transition: color 0.2s ease;
+  }
+
+  &:not(.Selected):hover {
+    background-color: var(--bg-secondary);
   }
 }
 

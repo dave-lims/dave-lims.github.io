@@ -56,6 +56,7 @@ const Home = () => {
           <b>engaging, human-centered experiences</b>
         </h4>
       </section>
+
       <section
         className={styles.Projects}
         style={{ height: "100vh" }}
@@ -66,8 +67,15 @@ const Home = () => {
           title="SLNG"
           description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
           mockup={slng}
+          techStack={["HTML", "CSS", "JavaScript", "Webpack"]}
           link="https://dave-lims.github.io/slng_2.0/"
+          github="https://github.com/dave-lims/slng_2.0"
         />
+      </section>
+
+      <section className={styles.Contact} id="contact">
+        <h2>Let&apos;s</h2>
+        <h1>Connect</h1>
       </section>
     </div>
   );

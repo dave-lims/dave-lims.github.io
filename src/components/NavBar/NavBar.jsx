@@ -21,7 +21,7 @@ const NavBar = ({ selected, setSelected }) => {
           setSelected={setSelected}
         >
           <FontAwesomeIcon icon="mitten" className={styles.Icon} />
-          <p>Hey</p>
+          <p className={styles.label}>Hey</p>
         </Tab>
         <Tab
           setIndicator={setIndicator}
@@ -30,7 +30,7 @@ const NavBar = ({ selected, setSelected }) => {
           setSelected={setSelected}
         >
           <FontAwesomeIcon icon="folder" className={styles.Icon} />
-          <p>Projects</p>
+          <p className={styles.label}>Projects</p>
         </Tab>
         <Tab
           setIndicator={setIndicator}
@@ -39,7 +39,7 @@ const NavBar = ({ selected, setSelected }) => {
           setSelected={setSelected}
         >
           <FontAwesomeIcon icon="id-badge" className={styles.Icon} />
-          <p>Contact</p>
+          <p className={styles.label}>Contact</p>
         </Tab>
 
         <Indicator position={indicator} />
@@ -76,7 +76,7 @@ const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
         href={`#${label}`}
         ref={ref}
         onClick={() => setSelected(label)}
-        className={selected == label ? styles.Selected : ""}
+        className={`${styles.Tab} ${selected == label ? styles.Selected : ""}`}
       >
         {children}
       </a>
