@@ -1,0 +1,33 @@
+.IconBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+
+  transition: all 0.3s ease;
+
+  .Icon {
+    font-size: var(--text-sm);
+  }
+
+  p {
+    line-height: var(--line-height-none);
+    font-weight: var(--weight-semibold);
+  }
+}
+
+.Button {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--brand-content);
+  color: var(--brand-content);
+
+  &:hover {
+    background-color: var(--brand-content);
+    color: var(--bg-primary);
+  }
+}
+
+.Link {
+  color: var(--text-subtle);
+}

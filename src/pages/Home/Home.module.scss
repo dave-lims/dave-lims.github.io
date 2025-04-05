@@ -59,3 +59,23 @@
   flex-direction: column;
   align-items: center;
 }
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  .contactHeader {
+    margin-bottom: 1.5rem;
+    color: var(--text-strong);
+
+    h2 {
+      font-size: 3rem;
+      line-height: var(--line-height-negative);
+      font-weight: var(--weight-extrabold);
+    }
+  }
+}

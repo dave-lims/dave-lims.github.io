@@ -2,17 +2,24 @@ import styles from "./IconBtn.module.scss";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const IconBtn = ({ label, icon, link }) => {
+const IconBtn = ({ type, label, icon, link }) => {
   return (
-    <button className={styles.IconBtn} href={link}>
+    <a
+      className={`${styles.IconBtn} ${
+        type === "button" ? styles.Button : styles.Link
+      }`}
+      href={link}
+      target="_blank"
+    >
       {/* // may need to replace with router */}
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} className={styles.Icon} />
       <p>{label}</p>
-    </button>
+    </a>
   );
 };
 
 IconBtn.propTypes = {
+  type: PropTypes.oneOf(["button", "link"]),
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   link: PropTypes.string,

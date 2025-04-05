@@ -27,6 +27,7 @@
   /* Letter spacing */
   --letter-spacing-tight: -0.05em;
   --letter-spacing-normal: -0.03em;
+  --letter-spacing-default: 0em;
 }
 
 /* Default styles */
@@ -46,8 +47,6 @@ h2 {
   font-weight: var(--weight-bold);
   line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-tight);
-
-  color: var(--text-subtle);
 }
 
 h3 {

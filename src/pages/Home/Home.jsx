@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
-import { ProjectCard, NavBar } from "../../components";
+import { ProjectCard, NavBar, IconBtn } from "../../components";
 import slng from "../../assets/mock-slng.png";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     // ==== Intersection Observer to keep track of which section is currently in view ====
-    const observerOptions = {
+    const options = {
       root: null, // viewport
       rootMargin: "-40% 0px", // center of viewport
       threshold: 0.1, // trigger when 10% of the section is visible
@@ -23,10 +23,7 @@ const Home = () => {
     };
 
     // Observer setup
-    const observer = new IntersectionObserver(
-      setSectionInView,
-      observerOptions
-    );
+    const observer = new IntersectionObserver(setSectionInView, options);
     const sections = document.querySelectorAll("section[id]");
     sections.forEach((section) => {
       observer.observe(section);
@@ -74,8 +71,22 @@ const Home = () => {
       </section>
 
       <section className={styles.Contact} id="contact">
-        <h2>Let&apos;s</h2>
-        <h1>Connect</h1>
+        <div className={styles.contactHeader}>
+          <h2>Let&apos;s</h2>
+          <h1>Connect</h1>
+        </div>
+        <IconBtn
+          type="button"
+          label="david.lim@berkeley.edu"
+          icon="paper-plane"
+          link="mailto:david.lim@berkeley.edu"
+        />
+        <IconBtn
+          type="link"
+          label="LinkedIn"
+          icon="linkedin"
+          link="https://linkedin.com/in/davidlim7391"
+        />
       </section>
     </div>
   );
