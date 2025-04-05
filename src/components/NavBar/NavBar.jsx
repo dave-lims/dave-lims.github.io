@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./NavBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const NavBar = ({ selected, setSelected }) => {
-  // const [selected, setSelected] = useState("home");
+const NavBar = ({ selected, navigateToSection }) => {
   const [indicator, setIndicator] = useState({
     left: 0,
     width: 0,
@@ -18,7 +17,7 @@ const NavBar = ({ selected, setSelected }) => {
           setIndicator={setIndicator}
           label="home"
           selected={selected}
-          setSelected={setSelected}
+          navigateToSection={navigateToSection}
         >
           <FontAwesomeIcon icon="mitten" className={styles.Icon} />
           <p className={styles.label}>Hey</p>
@@ -27,7 +26,7 @@ const NavBar = ({ selected, setSelected }) => {
           setIndicator={setIndicator}
           label="projects"
           selected={selected}
-          setSelected={setSelected}
+          navigateToSection={navigateToSection}
         >
           <FontAwesomeIcon icon="folder" className={styles.Icon} />
           <p className={styles.label}>Projects</p>
@@ -36,7 +35,7 @@ const NavBar = ({ selected, setSelected }) => {
           setIndicator={setIndicator}
           label="contact"
           selected={selected}
-          setSelected={setSelected}
+          navigateToSection={navigateToSection}
         >
           <FontAwesomeIcon icon="id-badge" className={styles.Icon} />
           <p className={styles.label}>Contact</p>
@@ -48,7 +47,13 @@ const NavBar = ({ selected, setSelected }) => {
   );
 };
 
-const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
+const Tab = ({
+  children,
+  setIndicator,
+  label,
+  selected,
+  navigateToSection,
+}) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -75,7 +80,7 @@ const Tab = ({ children, setIndicator, label, selected, setSelected }) => {
       <a
         href={`#${label}`}
         ref={ref}
-        onClick={() => setSelected(label)}
+        onClick={() => navigateToSection(label)}
         className={`${styles.Tab} ${selected == label ? styles.Selected : ""}`}
       >
         {children}
@@ -100,7 +105,7 @@ const Indicator = ({ position }) => {
 // Prop Type Validation
 NavBar.propTypes = {
   selected: PropTypes.string.isRequired,
-  setSelected: PropTypes.func.isRequired,
+  navigateToSection: PropTypes.func.isRequired,
 };
 
 Tab.propTypes = {
@@ -108,7 +113,7 @@ Tab.propTypes = {
   setIndicator: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   selected: PropTypes.string.isRequired,
-  setSelected: PropTypes.func.isRequired,
+  navigateToSection: PropTypes.func.isRequired,
 };
 
 Indicator.propTypes = {
