@@ -54,12 +54,26 @@ const Home = () => {
           icon="paper-plane"
           link="mailto:david.lim@berkeley.edu"
         />
-        <IconBtn
-          type="link"
-          label="LinkedIn"
-          icon="linkedin"
-          link="https://linkedin.com/in/davidlim7391"
-        />
+        <div className={styles.contactBtns}>
+          <IconBtn
+            type="link"
+            label="Resume"
+            icon="file"
+            link="https://drive.google.com/file/d/1JvbxrKsoNlPYzini2RxWsRZbWgd9Dxjc/view?usp=sharing"
+          />
+          <IconBtn
+            type="link"
+            label="LinkedIn"
+            icon={["fab", "linkedin"]}
+            link="https://linkedin.com/in/davidlim7391"
+          />
+          <IconBtn
+            type="link"
+            label="GitHub"
+            icon={["fab", "github"]}
+            link="https://github.com/dave-lims"
+          />
+        </div>
       </section>
     </div>
   );

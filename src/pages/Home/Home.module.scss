@@ -78,4 +78,11 @@
       font-weight: var(--weight-extrabold);
     }
   }
+
+  .contactBtns {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1rem;
+  }
 }

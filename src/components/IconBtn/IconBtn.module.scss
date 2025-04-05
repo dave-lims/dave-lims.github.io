@@ -30,4 +30,8 @@
 
 .Link {
   color: var(--text-subtle);
+
+  &:hover {
+    color: var(--text-strong);
+  }
 }

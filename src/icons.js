@@ -1,6 +1,6 @@
 // Icons imported from FontAwesome (free plan)
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFolder, faMitten, faIdBadge, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faFolder, faMitten, faIdBadge, faPaperPlane, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faHtml5, faCss3Alt, faSquareJs, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 // import { faFilePdf, faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -16,5 +16,6 @@ library.add(
   faCss3Alt,
   faSquareJs,
   faPaperPlane,
-  faLinkedin
+  faLinkedin,
+  faFile
 );

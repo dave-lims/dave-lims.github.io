@@ -21,7 +21,7 @@ const IconBtn = ({ type, label, icon, link }) => {
 IconBtn.propTypes = {
   type: PropTypes.oneOf(["button", "link"]),
   label: PropTypes.string.isRequired,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   link: PropTypes.string,
 };
 
