@@ -19,7 +19,7 @@ const Home = () => {
           <h1>David Lim</h1>
         </header>
 
-        <div className={styles.Placeholder}></div>
+        {/* <div className={styles.Placeholder}></div> */}
 
         <h4 className={styles.Description}>
           I&apos;m a <b>Creative Developer</b>, passionate about creating{" "}
@@ -27,20 +27,32 @@ const Home = () => {
         </h4>
       </section>
 
-      <section
-        className={styles.Projects}
-        style={{ height: "100vh" }}
-        id="projects"
-      >
+      <section className={styles.Projects} id="projects">
         <h2>Selected Works</h2>
-        <ProjectCard
-          title="SLNG"
-          description="Yeah, I don’t really get skibidi either—but there’s a site that gets it."
-          mockup={slng}
-          techStack={["HTML", "CSS", "JavaScript", "Webpack"]}
-          link="https://dave-lims.github.io/slng_2.0/"
-          github="https://github.com/dave-lims/slng_2.0"
-        />
+        <div className={styles.ProjectCards}>
+          <ProjectCard
+            title="Pabit"
+            description="AI-powered English learning app for Koreans, using TV and YouTube clips to teach real phrases."
+            mockup={slng}
+            link="https://pabit.app/"
+          />
+
+          <ProjectCard
+            title="SLNG"
+            description="Yeah, I don't really get skibidi either—but there's a site that gets it."
+            mockup={slng}
+            techStack={["html", "css", "js", "webpack"]}
+            link="https://dave-lims.github.io/slng_2.0/"
+            github="https://github.com/dave-lims/slng_2.0"
+          />
+
+          <ProjectCard
+            title="Your Recipe Generator"
+            description="Throw in what you've got, and we'll turn it into a meal you'll love."
+            mockup={slng}
+            techStack={["html", "css", "js", "webpack"]}
+          />
+        </div>
       </section>
 
       <section className={styles.Contact} id="contact">
