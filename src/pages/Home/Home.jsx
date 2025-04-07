@@ -2,6 +2,10 @@
 import styles from "./Home.module.scss";
 import { ProjectCard, NavBar, IconBtn } from "../../components";
 import slng from "../../assets/mock-slng.png";
+import slngLogo from "../../assets/slng-logo.png";
+import pabit from "../../assets/mock-pabit.png";
+import recipe from "../../assets/mock-recipe.png";
+import egg from "../../assets/egg.png";
 import useSectionNavigation from "../../hooks/useSectionNavigation";
 
 const Home = () => {
@@ -33,14 +37,15 @@ const Home = () => {
           <ProjectCard
             title="Pabit"
             description="AI-powered English learning app for Koreans, using TV and YouTube clips to teach real phrases."
-            mockup={slng}
+            mockup={pabit}
             link="https://pabit.app/"
+            // focusColor="#5048D8"
           />
 
           <ProjectCard
             title="SLNG"
             description="Yeah, I don't really get skibidi either—but there's a site that gets it."
-            mockup={slng}
+            mockup={[slng, slngLogo]}
             techStack={["html", "css", "js", "webpack"]}
             link="https://dave-lims.github.io/slng_2.0/"
             github="https://github.com/dave-lims/slng_2.0"
@@ -49,8 +54,8 @@ const Home = () => {
           <ProjectCard
             title="Your Recipe Generator"
             description="Throw in what you've got, and we'll turn it into a meal you'll love."
-            mockup={slng}
-            techStack={["html", "css", "js", "webpack"]}
+            mockup={[recipe, egg]}
+            techStack={["react"]}
           />
         </div>
       </section>
