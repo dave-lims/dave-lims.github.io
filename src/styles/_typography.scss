@@ -28,6 +28,10 @@
   --letter-spacing-tight: -0.05em;
   --letter-spacing-normal: -0.03em;
   --letter-spacing-default: 0em;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
 }
 
 /* Default styles */
@@ -40,6 +44,14 @@ h1 {
   font-weight: var(--weight-extrabold);
   line-height: var(--line-height-negative);
   letter-spacing: var(--letter-spacing-tight);
+
+  @media (max-width: 340px) {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+  }
 }
 
 h2 {
@@ -47,6 +59,10 @@ h2 {
   font-weight: var(--weight-bold);
   line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-tight);
+
+  @media (min-width: 1024px) {
+    font-size: 2.25rem;
+  }
 }
 
 h3 {
