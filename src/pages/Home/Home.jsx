@@ -41,6 +41,7 @@ const Home = () => {
             description="AI-powered English learning app for Koreans, using TV and YouTube clips to teach real phrases."
             mockup={pabit}
             link="https://pabit.app/"
+            roles={["Contract", "UI/UX", "Frontend"]}
             // focusColor="#5048D8"
           />
 

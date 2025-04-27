@@ -199,3 +199,27 @@
     fill: var(--text-subtle); // svg
   }
 }
+
+.roles {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding-inline: 0.75rem;
+
+  width: min(100%, 500px);
+
+  font-size: 0.875rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-subtle);
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+.roleBox {
+  padding: 0.5em 0.75em;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--text-disabled);
+}

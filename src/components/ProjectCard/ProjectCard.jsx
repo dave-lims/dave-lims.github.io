@@ -8,6 +8,7 @@ const ProjectCard = ({
   description,
   mockup,
   techStack,
+  roles,
   link,
   github,
 }) => {
@@ -16,6 +17,21 @@ const ProjectCard = ({
   // -- len 1: a flat phone image
   // -- len 2: [phone mock, logo] == logo on left (above), phone on right
   // **********
+  const renderRoles = (roles) => {
+    if (roles) {
+      return (
+        <div className={styles.roles}>
+          {roles.map((role, index) => (
+            <div key={index} className={styles.roleBox}>
+              {role}
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   const renderMockup = (mockup) => {
     if (!Array.isArray(mockup)) {
       return (
@@ -58,6 +74,7 @@ const ProjectCard = ({
           </div>
         </a>
 
+        {renderRoles(roles)}
         <TechStack techStack={techStack} github={github} />
       </div>
     </>
@@ -124,6 +141,7 @@ ProjectCard.propTypes = {
   link: PropTypes.string,
   techStack: PropTypes.arrayOf(PropTypes.string),
   github: PropTypes.string,
+  roles: PropTypes.arrayOf(PropTypes.string),
 };
 
 TechStack.propTypes = {
