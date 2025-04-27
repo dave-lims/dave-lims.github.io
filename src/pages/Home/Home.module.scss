@@ -1,6 +1,7 @@
 .Hero {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 
   height: 100vh;
@@ -15,6 +16,7 @@
   margin-bottom: 2.5rem;
 
   h1 {
+    width: fit-content;
     color: var(--text-strong);
   }
   h2 {

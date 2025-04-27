@@ -1,6 +1,8 @@
 // import { useState, useEffect } from "react";
 import styles from "./Home.module.scss";
-import { ProjectCard, NavBar, IconBtn } from "../../components";
+import { ProjectCard, NavBar, IconBtn, HeaderCard } from "../../components";
+import headerMe from "../../assets/me2.png";
+import arrow from "../../assets/arrow.png";
 import slng from "../../assets/mock-slng.png";
 import slngLogo from "../../assets/slng-logo.png";
 import pabit from "../../assets/mock-pabit.png";
@@ -23,7 +25,7 @@ const Home = () => {
           <h1>David Lim</h1>
         </header>
 
-        {/* <div className={styles.Placeholder}></div> */}
+        <HeaderCard imgs={[headerMe, arrow]} />
 
         <h4 className={styles.Description}>
           I&apos;m a <b>Creative Developer</b>, passionate about creating{" "}

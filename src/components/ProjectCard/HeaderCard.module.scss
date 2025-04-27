@@ -1,20 +1,10 @@
-// Main Card Component
-.projectCard {
+.HeaderCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: min(100%, 720px);
-  padding: 3rem 0rem;
+  margin-bottom: 2rem;
   transition: all 0.4s ease;
-  
-  // Link == a tag container
-  &__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transition: all 0.4s ease;
-  }
 
   // [Desktop Only] Hover Interactions
   @media (min-width: 1024px) {
@@ -29,14 +19,15 @@
           transform: translateX(-50%) scale(1.05);
         }
 
-        &__logo {
-          top: 40%;
-          transform: translateX(-145%) rotate(-15deg) scale(1.25);
+        &__asset {
+          top: 45%;
+          left: 47.5%;
+          transform: translateX(-145%) rotate(-20deg) scale(1.15);
         }
 
-        &__phone {
-          top: 10%;
-          transform: translateX(-45%) scale(1.05) rotate(5deg);
+        &__me {
+          top: -5%;
+          transform: translateX(-35%) scale(1.10) rotate(20deg);
         }
 
         &__background {
@@ -53,11 +44,10 @@
   }
 }
 
-// Mockup Container
 .mockup {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 150px;
   border-radius: var(--border-radius-md);
   overflow: hidden;
 
@@ -84,30 +74,47 @@
   }
 
   // Logo Image
-  &__logo {
-    width: min(35%, 115px);
-    top: 62.5%;
-    left: 50%;
-    transform: translateX(-120%) rotate(-5deg); 
+  &__asset {
+    top: 60%;
+    left: 42.5%;
+    width: 42.5px;
+    transform: translateX(-145%) rotate(-15deg) scale(1.25);
+
+    @media (min-width: 480px) {
+      left: 40%;
+      width: 50px;
+    }
+
+    @media (min-width: 1024px) {
+      top: 70%;
+      left: 50%;
+      width: 60px;
+      transform: translateX(-120%) rotate(-5deg); 
+    }
   }
 
   // Phone Mockup Image
-  &__phone {
-    width: min(100%, 280px);
-    top: 35%;
-    left: 50%;
-    transform: translateX(-47.5%);
+  &__me {
+    width: 140px;
+    top: 12.5%;
+    left: 60%;
+    transform: translateX(-47.5%) rotate(10deg);
 
     @media (min-width: 375px) {
-      top: 20%;
+      width: 160px;
+    }
+
+    @media (min-width: 600px) {
+      top: 0%;
+      left: 57.5%;
     }
     
     @media (min-width: 1024px) {
       top: 30%;
+      width: 200px;
+      transform: translateX(-47.5%) rotate(0deg);
     }
   }
-
-
   
   // Background "Bar" behind Mockup
   &__background {
@@ -118,7 +125,8 @@
     z-index: -1;
     overflow: hidden;
     
-    height: 120px;
+    width: min(100%, 500px);
+    height: 100px;
 
     background-color: var(--bg-secondary);
     border-radius: var(--border-radius-lg);
@@ -138,64 +146,5 @@
       opacity: 0;
       transition: transform 0.5s ease, opacity 0.5s ease;
     }
-  }
-}
-
-// Shared Width Constraint
-.mockup__background, 
-.content, 
-.techStack {
-  width: min(100%, 500px);
-}
-
-// Content Section
-.content {
-  padding: 1rem 0.75rem;
-  
-  @media (min-width: 768px) {
-    padding: 1.25rem 2rem;
-  }
-}
-
-.title {
-  margin-bottom: 0.25rem;
-  color: var(--text-strong);
-}
-
-// Tech Stack Section
-.techStack {
-  display: flex;
-  align-items: center;
-  gap: 0.125em;
-  padding-inline: 0.75rem;
-  
-  @media (min-width: 768px) {
-    padding-inline: 2rem;
-  }
-  
-  // GitHub Link
-  .github {
-    transition: color 0.3s ease;
-    
-    &:hover {
-      color: var(--text-strong);
-    }
-  }
-  
-  // Separator
-  &__separator {
-    margin-inline: 0.5rem;
-    width: 1.5px;
-    height: 1.25rem;
-    background-color: var(--text-disabled);
-    border-radius: 1px;
-  }
-  
-  // Tech Icons
-  &__icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    color: var(--text-subtle); // fontawesome
-    fill: var(--text-subtle); // svg
   }
 }
